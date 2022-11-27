@@ -281,7 +281,7 @@ boolean FtpServer::processCommand()
       Serial.println( "Data port set to " + String(dataPort));
     #endif
    client.println( "227 Entering Passive Mode ("+ String(dataIp[0]) + "," + String(dataIp[1])+","+ String(dataIp[2])+","+ String(dataIp[3])+","+String( dataPort >> 8 ) +","+String ( dataPort & 255 )+").");
-   dataPassiveConn = true;
+   dataPassiveConn = false;
   }
   //
   //  PORT - Data Port
